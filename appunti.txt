@@ -1,0 +1,180 @@
+Esercitazione Git: Clone e Undo 
+1. Clonazione del Repository
+Per ottenere una copia di un progetto remoto sul tuo computer, usa:
+git clone https://github.com/sena-meucci/orario.git
+
+Questo comando scarica il progetto dal repository remoto e crea una cartella locale con il codice. 
+2. Configurazione Git
+Dopo aver clonato il progetto, entra nel progetto:
+cd orario
+
+Configura il tuo nome e la tua email:
+git config user.name "IlTuoNome"
+git config user.email "laTuaEmail@example.com"
+
+3. Visualizzare i Log dei Commit
+Per vedere la cronologia dei commit, usa:
+git log
+
+Ogni commit ha un ID unico (es. cbc6611474f48923b66bfab22e30505d1a7e0313) che lo identifica.
+4. Visualizzare i Branch
+Per vedere i branch disponibili nel progetto:
+git branch
+
+L'asterisco (*) indica il branch attivo.
+5. Visualizzare e Gestire i Repository Remoti
+Per vedere gli URL dei repository remoti:
+git remote -v
+
+Per cambiare l'URL remoto del repository (ad esempio dopo aver creato un repository personale su GitHub):
+git remote set-url origin https://new.git.url/here
+
+6. Effettuare il Push su un Repository Remoto
+Per inviare le modifiche al repository remoto:
+git push origin main
+Annullare le Modifiche (Undo)
+Annullare Modifiche Non Commited
+Se hai modificato un file ma non l'hai ancora aggiunto alla staging area:
+git restore nomeFile
+
+Annullare Modifiche nella Staging Area
+Se hai già aggiunto il file alla staging area (con git add), puoi rimuoverlo:
+git restore --staged nomeFile
+
+Esplorare un Commit Specifico (senza modificarlo)
+Per tornare a un commit precedente senza fare modifiche:
+git checkout COMMIT-ID
+
+Per tornare al branch principale dopo l'esplorazione:
+git checkout main
+
+Riportare il Progetto a un Commit Precedente
+Per annullare le modifiche e riportare il progetto a uno stato precedente:
+git reset --hard COMMIT-ID
+
+ATTENZIONE: Questo comando rimuove definitivamente le modifiche.
+Annullare un Commit con un Nuovo Commit (senza modificare la cronologia)
+Se desideri annullare un commit, ma mantenere la cronologia, usa:
+git revert COMMIT-ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modifica del README.md e Commit
+Modifica il file README.md con le risposte agli esercizi.
+
+
+Aggiungi e committa il file:
+
+
+git add README.md
+git commit -m "Aggiunto README con risposte"
+git push origin main
+
+
+Markdown - Sintassi e Uso
+Comandi Markdown di Base
+Testo
+Grassetto: **testo**
+
+
+Corsivo: *testo*
+
+
+Testo barrato: ~~testo~~
+
+
+Evidenziato: ==testo==
+
+
+Link
+Per aggiungere un link:
+[testo del link](https://esempio.com)
+
+Immagini
+Per aggiungere un'immagine:
+![alt text](https://esempio.com/immagine.jpg)
+
+Codice
+Codice inline: `codice`
+
+
+Blocco di codice:
+
+
+codice
+Liste
+Lista non ordinata:
+
+
+* elemento 1
+* elemento 2
+Lista ordinata:
+
+
+1. Primo
+2. Secondo
+
+Citazioni (Blockquote)
+Per aggiungere una citazione:
+> Questa è una citazione
+
+Intestazioni (Titoli)
+H1 (Titolo grande): # Titolo
+
+
+H2 (Titolo medio): ## Titolo
+
+
+H3 (Titolo piccolo): ### Titolo
+
+
+
+Come Usare Markdown nel README.md
+Titoli: Aggiungi i titoli principali con # per descrivere le sezioni del progetto (es. descrizione, comandi usati, etc.).
+
+
+Formattazione: Usa grassetto, corsivo, evidenziato per rendere il testo più chiaro.
+
+
+Liste e Codici: Usa liste numerate o puntate per organizzare le informazioni e i blocchi di codice per i comandi Git.
+
+
+Salva e Commit: Quando hai finito di scrivere, fai un git add e git commit per aggiornare il repository.
+
+
+Riepilogo della Sequenza di Operazioni in Git e Markdown
+Clonare il repository: git clone
+
+
+Configurare Git: git config
+
+
+Visualizzare la cronologia: git log
+
+
+Gestire i branch: git branch
+
+
+Gestire i repository remoti: git remote
+
+
+Push sul repository remoto: git push
+
+
+Annullare modifiche: git restore, git reset, git revert
+
+
+Modificare il README.md: Usa la sintassi Markdown per documentare le risposte e i comandi.			
+Commit e Push del README.md: git add, git commit, git push
