@@ -178,3 +178,4 @@ Annullare modifiche: git restore, git reset, git revert
 
 Modificare il README.md: Usa la sintassi Markdown per documentare le risposte e i comandi.			
 Commit e Push del README.md: git add, git commit, git push
+
